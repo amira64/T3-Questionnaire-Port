@@ -1,0 +1,34 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  </div>
+
+  
+  <div class="border-round border-1 surface-border p-4 surface-card" style="background-color: hwb(91 2% 59%); border-radius: 9px; text-align: center; width: 1500px; height: 200px;">
+    <div>
+      
+      <div class="center-container">
+      <div  class="border-round border-1" style=" padding: 10px; height: 800px;  text-align: left;  border-radius: 9px; background-color: #e2f4d2ea;">
+        <h2 style="font-size: 40px; color: hsl(100, 92%, 25%);" > Question {{ currentQuestionIndex + 1 }}</h2>
+        <br>
+        <p style="font-size: 30px; ">{{ questions[currentQuestionIndex].text }}</p>
+        <div *ngFor="let option of questions[currentQuestionIndex].options">
+          <label>
+            <br><br><br>
+            <input type="radio" [(ngModel)]="selectedOption" [value]="option">{{ option }}
+          </label>
+        </div> <br>
+        <button [disabled]="selectedOption === undefined" (click)="nextQuestion()" style="width:100px ; border-radius: 5; height: 25px; background-color: #156d1b; color: #e2f4d2ea;" >Next</button>
+      </div>
+      
+
+
+
+
+
+    </div>
+  </div>
+</div>
+

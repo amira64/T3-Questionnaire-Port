@@ -1,0 +1,59 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 
+    <div class="container-fluid" >
+    
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      </div>
+        </div>
+     
+  </nav>
+
+  <div class="center-container">
+    <div class="border-round border-1 surface-border p-4 surface-card" style="background-color: hsla(88, 57%, 28%, 0.782); border-radius: 9px; text-align: center; width: 600px; height: 200px;">
+      <div>
+        <h2 style="font-size: 45px; color: #e2f4d2ea;">Select User</h2>
+        <select [(ngModel)]="selectedUser" style="height: 30px; width:200px;">
+          <option *ngFor="let user of users" [value]="user.id" >{{ user.name }}</option>
+        </select>
+        <button [disabled]="!selectedUser" (click)="startQuestionnaire()" style="height: 30px; width:70px; border: radius 12px;; background-color: #e2f4d2ea; color: #156d1b; font-size: 15px;"><b>Next</b></button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
